@@ -14,7 +14,6 @@ db.restaurants.find({ borough: "Bronx" },{ _id: 0 }).limit(5)
 db.restaurants.find({ borough: "Bronx" },{ _id: 0 }).skip(5).limit(5)
 // 8. Trobar els restaurants amb un score de més de 90.
 db.restaurants.aggregate([{ $addFields: { total_score: { $sum: "$grades.score" }}},{ $match: { total_score: { $gt: 90 }}},{ $project: { _id: 0 }}])
-// 9. Trobar els restaurants amb un score de més de 80 però menys que 100.
-db.restaurants.aggregate([{ $addFields: { total_score: { $sum: "$grades.score" }}},{ $match: { total_score: { $gt: 80, $lt: 100 }}},{ $project: { _id: 0 }}])
+
 
 
