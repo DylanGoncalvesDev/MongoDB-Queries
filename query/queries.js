@@ -45,7 +45,7 @@ db.restaurants.find({ grades: { $elemMatch: { grade: "A", score: 11, date: ISODa
 // 23. Trobar restaurant_id, name i grades on el 2n element té grau "A", score 9 i data "2014-08-11T00:00:00Z".
 db.restaurants.find({ "grades.1.grade": "A", "grades.1.score": 9, "grades.1.date": ISODate("2014-08-11T00:00:00Z") },{ restaurant_id: 1, name: 1, grades: 1, })
 // 24. Trobar el restaurant_id, name, street, zipcode i coordenades dels restaurants a menys de 5 km de [-74, 40.7].
-db.restaurants.find({ location: { $near: { geometry: { type: "Point", coordinates: [-74, 40.7] }, $maxDistance: 5000 }}})
+db.restaurants.find({ location: { $near: { $geometry: { type: "Point", coordinates: [-74, 40.7] }, $maxDistance: 5000 }}})
 // 25. Ordenar els noms dels restaurants en ordre ascendent, mostrant totes les columnes.
 db.restaurants.find().sort({ name: 1 })
 // 26. Ordenar els noms dels restaurants en ordre descendent, mostrant totes les columnes.
