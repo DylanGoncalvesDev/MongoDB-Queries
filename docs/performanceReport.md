@@ -12,7 +12,7 @@
 2. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({},{ _id: 0, restaurant_id: 1, name: 1 })`
-- ⏱️ **Execution time**: 0 ms
+- ⏱️ **Execution time**: 1 ms
 - 📚 **Documents returned**: 664
 - 🔍 **Documents examined**: 664
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -61,12 +61,26 @@
 - 🧪 **Query**: `db.restaurants.find({ borough: "Bronx" },{ _id: 0 }).limit(5)`
 - ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 5
-- 🔍 **Documents examined**: 54
+- 🔍 **Documents examined**: 55
 - 🛠️ **Execution stage**: LIMIT
 
 ## 🚨 Performance Issues
 
 ### ⚠️ High Priority Issues
-- ⚠️ Examined 54 docs to return 5 (ratio 10.8:1)
+- ⚠️ Examined 55 docs to return 5 (ratio 11.0:1)
+
+
+7. ## 📊 Query Performance Report
+
+- 🧪 **Query**: `db.restaurants.find({ borough: "Bronx" },{ _id: 0 }).skip(5).limit(5)`
+- ⏱️ **Execution time**: 0 ms
+- 📚 **Documents returned**: 5
+- 🔍 **Documents examined**: 158
+- 🛠️ **Execution stage**: LIMIT
+
+## 🚨 Performance Issues
+
+### ⚠️ High Priority Issues
+- ⚠️ Examined 158 docs to return 5 (ratio 31.6:1)
 
 
