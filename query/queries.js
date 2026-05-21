@@ -13,7 +13,7 @@ db.restaurants.find({ borough: "Bronx" },{ _id: 0 }).limit(5)
 // 7. Mostrar el pròxims 5 restaurants després de saltar els primers 5 del Bronx.
 db.restaurants.find({ borough: "Bronx" },{ _id: 0 }).skip(5).limit(5)
 // 8. Trobar els restaurants amb un score de més de 90.
-db.restaurants.aggregate([{ $addFields: { total_score: { $sum: { $map: { input: "$grades", as: "g", in: "$$g.score" } } } } }, { $match: { total_score: { $gt: 90 } } }])
+db.restaurants.aggregate([{ $addFields: { total_score: { $sum: "grades.score" } } }, { $match: { total_score: { $gt: 90 } } }])
 
 
 
