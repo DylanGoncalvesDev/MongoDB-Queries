@@ -82,12 +82,7 @@
 - ✔️ OK - Query **[ 27 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 28 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"address":{}}
-- **Actual:** {"address":{},"borough":"Brooklyn","cuisine":"Hamburgers","grades":[{},{},{}],"location":{},"name":"White Castle","restaurant_id":40386837}
+- ✔️ OK - Query **[ 28 ]**
 
 ---
 - ✔️ OK - Query **[ 29 ]**
