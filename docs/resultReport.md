@@ -25,12 +25,7 @@
 - ✔️ OK - Query **[ 8 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 9 ]** Result does not match expected output.
-
-
-🔢 Different result lengths: 
-- **Expected:** 1
-- **Got:** 2
+- ✔️ OK - Query **[ 9 ]**
 
 ---
 - ✔️ OK - Query **[ 10 ]**
@@ -42,12 +37,7 @@
 - ✔️ OK - Query **[ 12 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 13 ]** Result does not match expected output.
-
-
-🔢 Different result lengths: 
-- **Expected:** 318
-- **Got:** 2
+- ✔️ OK - Query **[ 13 ]**
 
 ---
 - ✔️ OK - Query **[ 14 ]**
@@ -80,12 +70,7 @@
 - ✔️ OK - Query **[ 23 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 24 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"address":{},"location":{},"name":"The Movable Feast","restaurant_id":40361606}
-- **Actual:** {"address":{},"borough":"Brooklyn","cuisine":"American","grades":[{},{},{},{}],"location":{},"name":"The Movable Feast","restaurant_id":40361606}
+- ✔️ OK - Query **[ 24 ]**
 
 ---
 - ✔️ OK - Query **[ 25 ]**
@@ -111,12 +96,7 @@
 - ✔️ OK - Query **[ 30 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 31 ]** Result does not match expected output.
-
-
-🔢 Different result lengths: 
-- **Expected:** 10
-- **Got:** 7
+- ✔️ OK - Query **[ 31 ]**
 
 ---
 - ❌ MISMATCH - Query **[ 32 ]** Result does not match expected output.
@@ -124,5 +104,5 @@
 
 🔢 Different result lengths: 
 - **Expected:** 1
-- **Got:** 2
+- **Got:** 0
 
